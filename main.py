@@ -288,6 +288,12 @@ print(student2.on_honor_roll())
 
 
 #Inheritance
+#ChineseChef inherits from Class Chef & Overrides its special dish method
+from Classes.ChineseChef import ChineseChef
+
+myChef = ChineseChef()
+myChef.make_special_dish()
 
 # Python Interpreter
-
+#install python to os path variable
+# use from terminal for messing around without setting up an env
