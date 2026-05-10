@@ -51,9 +51,9 @@ print(immutableList)
 
 
 #Prompt
-# x = float(input("Enter a real number to plug in f(x) = x^2 + 10x + 16 : "))
-# quadraticEq = pow(x,2) + 10 * x + 16
-# print(quadraticEq)
+x = float(input("Enter a real number to plug in f(x) = x^2 + 10x + 16 : "))
+quadraticEq = pow(x,2) + 10 * x + 16
+print(quadraticEq)
 
 # Functions
 def cube(x):
@@ -86,25 +86,25 @@ def max(a,b,c):
 print(max(3,3,3))
 
 # calc exp
-# operand_1 = float(input("enter your first operand: "))
-# operator = input('enter your operator: ')
-# operand_2 = float(input("enter your second operand: "))
-# def calc():
-#     match(operator):
-#         case "+":
-#             return operand_1 + operand_2
-#         case("-"):
-#             return operand_1 - operand_2
-#         case("*"):
-#             return operand_1 * operand_2
-#         case("**"):
-#             return operand_1 ** operand_2
-#         case("%"):
-#             return operand_1 % operand_2
-#         case("/"):
-#             return operand_1 / operand_2
-#         case _: return "invalid operator"
-# print(calc())
+operand_1 = float(input("enter your first operand: "))
+operator = input('enter your operator: ')
+operand_2 = float(input("enter your second operand: "))
+def calc():
+    match(operator):
+        case "+":
+            return operand_1 + operand_2
+        case("-"):
+            return operand_1 - operand_2
+        case("*"):
+            return operand_1 * operand_2
+        case("**"):
+            return operand_1 ** operand_2
+        case("%"):
+            return operand_1 % operand_2
+        case("/"):
+            return operand_1 / operand_2
+        case _: return "invalid operator"
+print(calc())
 
 
 # Dictionaries
@@ -131,22 +131,22 @@ print("done with the loop: "+ str(i))
 
 
 # Guessing Game
-# secret_word = "secret"
-# guess = ""
-# guess_count = 0
-# guess_limit = 3
-# outOfGuesses = False
-# while guess != secret_word and not(outOfGuesses):
-#     if guess_count<guess_limit:
-#         guess = input('Guess the secret word:')
-#         guess_count += 1
-#         if guess == secret_word:
-#             print("You guessed the word")
-#         else:
-#             print("You guessed wrong \n you have " + str(3 -guess_count) +" guesses left")
-#     else :
-#         print("Your out of guesses, You Lose")
-#         break
+secret_word = "secret"
+guess = ""
+guess_count = 0
+guess_limit = 3
+outOfGuesses = False
+while guess != secret_word and not(outOfGuesses):
+    if guess_count<guess_limit:
+        guess = input('Guess the secret word:')
+        guess_count += 1
+        if guess == secret_word:
+            print("You guessed the word")
+        else:
+            print("You guessed wrong \n you have " + str(3 -guess_count) +" guesses left")
+    else :
+        print("Your out of guesses, You Lose")
+        break
 
 # For Loop
 
@@ -166,33 +166,33 @@ print(result)
 
 # 2D lists n nested Loops
 
-# number_grid = [
-#     [1,2,3],
-#     [4,5,6],
-#     [7,8,9],
-#     [0]
-# ]
-# print(number_grid[0][0])
-#
-# for row in number_grid:
-#     for col in row:
-#         print(col)
+number_grid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0]
+]
+print(number_grid[0][0])
+
+for row in number_grid:
+    for col in row:
+        print(col)
 
 # Building a Translator
-# def translate(phrase):
-#     translation = ''
-#     for letter in phrase:
-#         if letter.lower() in 'aeiou':
-#             if(letter.isupper()):
-#                 translation += "G"
-#             else:
-#                 translation = translation + "g"
-#
-#         else :
-#             translation += letter
-#     return translation
-# translation = translate(input("Enter a phrase: "))
-# print(translation)
+def translate(phrase):
+    translation = ''
+    for letter in phrase:
+        if letter.lower() in 'aeiou':
+            if(letter.isupper()):
+                translation += "G"
+            else:
+                translation = translation + "g"
+
+        else :
+            translation += letter
+    return translation
+translation = translate(input("Enter a phrase: "))
+print(translation)
 
 
 # Comments
@@ -257,29 +257,29 @@ print(student1.major)
 
 # Building a Multiple Choice Quiz
 
-# from Classes.Question import Question
-#
-# question_prompts = [
-#     "What color are apples?\n(a) Red/Green \n(b) Yellow \n(c) Orange\n(d) Purple \n\n",
-#     "What color are Bananas?\n(a) Teal \n(b) Magenta \n(c) Yellow \n\n",
-#     "What color are strawberries?\n(a) Yellow \n(b) Red \n(c) Blue \n\n",
-# ]
-#
-# questions = [
-#     Question(question_prompts[0],"a"),
-#     Question(question_prompts[1],"c"),
-#     Question(question_prompts[2],"b"),
-# ]
-# def run_test(questions):
-#     score = 0
-#     for question in questions:
-#         answer = input(question.prompt)
-#         if(answer == question.answer):
-#             score += 1
-#     return "You scored " + str(score) + " out of " + str(len(questions)) + " questions"
-#
-#
-# print(run_test(questions))
+from Classes.Question import Question
+
+question_prompts = [
+    "What color are apples?\n(a) Red/Green \n(b) Yellow \n(c) Orange\n(d) Purple \n\n",
+    "What color are Bananas?\n(a) Teal \n(b) Magenta \n(c) Yellow \n\n",
+    "What color are strawberries?\n(a) Yellow \n(b) Red \n(c) Blue \n\n",
+]
+
+questions = [
+    Question(question_prompts[0],"a"),
+    Question(question_prompts[1],"c"),
+    Question(question_prompts[2],"b"),
+]
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if(answer == question.answer):
+            score += 1
+    return "You scored " + str(score) + " out of " + str(len(questions)) + " questions"
+
+
+print(run_test(questions))
 
 
 # Object Functions
