@@ -1,8 +1,4 @@
 #import math lib
-from gettext import translation
-from math import *
-
-from pip._internal.utils import retry
 
 # Primitive Types aka immutable objects stored in the heap
 String1 = "name"
@@ -249,9 +245,43 @@ employees_file_w.close()
 from module import get_file_ext as get_ext
 ext1 =get_ext("employees.txt")
 print(ext1)
+#install modules from external libs using pip
+#pip install mocklib (used in terminal by using git or powershell any type of terminal)
+
+
 # Classes n Objects
+from Classes.Student import Student
+student1 = Student("Salman","CS",4,False)
+print(student1.major)
+
 
 # Building a Multiple Choice Quiz
+
+from Classes.Question import Question
+
+question_prompts = [
+    "What color are apples?\n(a) Red/Green \n(b) Yellow \n(c) Orange\n(d) Purple \n\n",
+    "What color are Bananas?\n(a) Teal \n(b) Magenta \n(c) Yellow \n\n",
+    "What color are strawberries?\n(a) Yellow \n(b) Red \n(c) Blue \n\n",
+]
+
+questions = [
+    Question(question_prompts[0],"a"),
+    Question(question_prompts[1],"c"),
+    Question(question_prompts[2],"b"),
+]
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if(answer == question.answer):
+            score += 1
+    return "You scored " + str(score) + " out of " + str(len(questions)) + " questions"
+
+
+print(run_test(questions))
+
+
 # Object Functions
 #Inheritance
 # Python Interpreter
