@@ -257,32 +257,37 @@ print(student1.major)
 
 # Building a Multiple Choice Quiz
 
-from Classes.Question import Question
-
-question_prompts = [
-    "What color are apples?\n(a) Red/Green \n(b) Yellow \n(c) Orange\n(d) Purple \n\n",
-    "What color are Bananas?\n(a) Teal \n(b) Magenta \n(c) Yellow \n\n",
-    "What color are strawberries?\n(a) Yellow \n(b) Red \n(c) Blue \n\n",
-]
-
-questions = [
-    Question(question_prompts[0],"a"),
-    Question(question_prompts[1],"c"),
-    Question(question_prompts[2],"b"),
-]
-def run_test(questions):
-    score = 0
-    for question in questions:
-        answer = input(question.prompt)
-        if(answer == question.answer):
-            score += 1
-    return "You scored " + str(score) + " out of " + str(len(questions)) + " questions"
-
-
-print(run_test(questions))
+# from Classes.Question import Question
+#
+# question_prompts = [
+#     "What color are apples?\n(a) Red/Green \n(b) Yellow \n(c) Orange\n(d) Purple \n\n",
+#     "What color are Bananas?\n(a) Teal \n(b) Magenta \n(c) Yellow \n\n",
+#     "What color are strawberries?\n(a) Yellow \n(b) Red \n(c) Blue \n\n",
+# ]
+#
+# questions = [
+#     Question(question_prompts[0],"a"),
+#     Question(question_prompts[1],"c"),
+#     Question(question_prompts[2],"b"),
+# ]
+# def run_test(questions):
+#     score = 0
+#     for question in questions:
+#         answer = input(question.prompt)
+#         if(answer == question.answer):
+#             score += 1
+#     return "You scored " + str(score) + " out of " + str(len(questions)) + " questions"
+#
+#
+# print(run_test(questions))
 
 
 # Object Functions
+student2 = Student("Adham","Physiotherapist", 3.4,True)
+print(student2.on_honor_roll())
+
+
 #Inheritance
+
 # Python Interpreter
 
