@@ -215,13 +215,13 @@ except ValueError as e:
     print(e)
 
 # Reading files
-employees_file = open("employees.txt","r")
+employees_file = open("Files I&O Manipulation/employees.txt", "r")
 for employee in employees_file.readlines():
     print(employee)
 employees_file.close()
 
 # Writing to files
-employees_file_w = open("employees.txt","a")
+employees_file_w = open("Files I&O Manipulation/employees.txt", "a")
 employees_file_w.write("\nRakan - Human Resources")
 employees_file_w.close()
 
@@ -242,8 +242,8 @@ employees_file_w.close()
 # )
 
 # Modules & Pip
-from module import get_file_ext as get_ext
-ext1 =get_ext("employees.txt")
+from mockExternalLib.module import get_file_ext as get_ext
+ext1 =get_ext("Files I&O Manipulation/employees.txt")
 print(ext1)
 #install modules from external libs using pip
 #pip install mocklib (used in terminal by using git or powershell any type of terminal)
